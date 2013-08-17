@@ -1,0 +1,8 @@
+{
+	"name": "fitbit",
+	"description": "Fitbit login service for Meteor",
+	"homepage": "https://github.com/wbartley/fitbit",
+	"author": "wbartley <wbartley@gmail.com>",
+	"version": "0.1.0",
+	"git": "https://github.com/wbartley/fitbit.git"
+}
