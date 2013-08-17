@@ -1,6 +1,16 @@
-Fitbit.whitelistedFields = ['encodedId', 'displayName'];
+Fitbit = {};
 
-Oauth.registerService('fitbit', 1, Fitbit._urls, function(oauthBinding) {
+urls = {
+	requestToken: "https://api.fitbit.com/oauth/request_token",
+	authorize: "https://www.fitbit.com/oauth/authorize",
+	accessToken: "https://api.fitbit.com/oauth/access_token",
+	authenticate: "https://www.fitbit.com/oauth/authenticate"
+};
+
+
+Fitbit.whitelistedFields = ['id', 'displayName'];
+
+Oauth.registerService('fitbit', 1, urls, function(oauthBinding) {
   var identity = oauthBinding.get('https://api.fitbit.com/1/user/-/profile.json').data;
 
   var serviceData = {
